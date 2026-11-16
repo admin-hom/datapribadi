@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jarvis Lokal</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <div class="scanline" aria-hidden="true"></div>
+
+    <div class="shell">
+      <header class="top">
+        <div class="brand">
+          <div class="orb" aria-hidden="true"></div>
+          <div>
+            <h1>JARVIS</h1>
+            <p id="pcLine">nyambung ke PC…</p>
+          </div>
+        </div>
+        <div class="top-right">
+          <span class="chip" id="aiChip"><i class="dot"></i><span>cek AI…</span></span>
+          <button class="ghost" id="clearBtn" type="button">Reset chat</button>
+        </div>
+      </header>
+
+      <main class="chat" id="chat" aria-live="polite"></main>
+
+      <div class="suggest" id="suggest"></div>
+
+      <form class="composer" id="form">
+        <textarea
+          id="input"
+          rows="1"
+          placeholder="Suruh Jarvis apa aja… (Enter kirim, Shift+Enter baris baru)"
+          autocomplete="off"
+        ></textarea>
+        <button class="send" id="sendBtn" type="submit" aria-label="Kirim">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l16-8-6 8 6 8-16-8z" /></svg>
+        </button>
+      </form>
+      <p class="foot">Akses penuh aktif · perintah berbahaya diblokir · semua aksi tampil di chat</p>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

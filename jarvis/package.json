@@ -1,0 +1,14 @@
+{
+  "name": "jarvis-local",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Asisten pribadi lokal yang bisa baca/tulis file dan jalanin command di PC sendiri.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "selftest": "node selftest.mjs"
+  }
+}
