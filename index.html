@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jadwal harian pribadi: rencana kegiatan tiap hari, dari Senin sampai Minggu." />
+    <title>Jadwal Harian Gw</title>
+  </head>
+  <body>
+    <div class="glow" aria-hidden="true"></div>
+
+    <main class="app">
+      <header class="hero">
+        <p class="eyebrow">Jadwal harian</p>
+        <h1>Rencana gw<br /><span id="todayLabel">hari ini</span></h1>
+        <p class="sub">Semua kegiatan yang mau gw kerjain tiap hari, jam demi jam. Centang kalau beres.</p>
+      </header>
+
+      <nav class="days" id="days" aria-label="Pilih hari"></nav>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2 id="dayTitle">Senin</h2>
+            <p id="daySub" class="muted"></p>
+          </div>
+          <div class="progress">
+            <div class="progress-meta">
+              <strong id="progressText">0/0</strong>
+              <span>selesai</span>
+            </div>
+            <div class="bar"><div class="bar-fill" id="progressBar"></div></div>
+          </div>
+        </div>
+
+        <ul class="timeline" id="timeline"></ul>
+        <p class="empty" id="emptyState" hidden>Belum ada kegiatan di hari ini. Tambahin di bawah ya.</p>
+
+        <form class="add-form" id="addForm" autocomplete="off">
+          <label class="field time">
+            <span>Jam</span>
+            <input type="time" id="startInput" required />
+          </label>
+          <label class="field grow">
+            <span>Kegiatan</span>
+            <input type="text" id="titleInput" placeholder="misal: deep work coding" maxlength="70" required />
+          </label>
+          <label class="field">
+            <span>Kategori</span>
+            <select id="categoryInput">
+              <option value="kerja">Kerja</option>
+              <option value="belajar">Belajar</option>
+              <option value="olahraga">Olahraga</option>
+              <option value="istirahat">Istirahat</option>
+              <option value="pribadi">Pribadi</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </label>
+          <button type="submit" class="primary">Tambah</button>
+        </form>
+
+        <div class="panel-foot">
+          <p class="muted small">Tersimpan otomatis di browser ini.</p>
+          <button type="button" class="ghost" id="resetBtn">Reset centang hari ini</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
